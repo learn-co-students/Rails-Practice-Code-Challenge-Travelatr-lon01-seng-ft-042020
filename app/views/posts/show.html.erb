@@ -1,5 +1,10 @@
-<h3><%= @post.title%></h3>
+<h3><%= @post.title %></h3>
 
+<h4><%= @post.content %></h4>
+
+<h5>Written by: <%= link_to @post.blogger.name, @post.blogger %>
+<h5>Written about: <%= link_to @post.destination.name, @post.destination %>
+<br>
 <%= button_to("Like", "/posts/#{@post.id}/like") %>
-
+<br>
 <%= "Likes: #{@post.likes}"%>
