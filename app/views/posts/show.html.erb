@@ -1,0 +1,5 @@
+<h3><%= @post.title%></h3>
+
+<%= button_to("Like", "/posts/#{@post.id}/like") %>
+
+<%= "Likes: #{@post.likes}"%>
