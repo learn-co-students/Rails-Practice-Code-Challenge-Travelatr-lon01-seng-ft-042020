@@ -12,6 +12,10 @@ class PostsController < ApplicationController
         redirect_to post_path(@post.id)
     end
 
+    def edit
+        @post = Post.find(params[:id])
+    end
+
     def like
         @post = Post.find(params[:id])
         @post.likes +=1

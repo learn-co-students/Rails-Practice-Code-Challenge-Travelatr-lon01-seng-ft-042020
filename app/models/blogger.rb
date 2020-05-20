@@ -6,5 +6,4 @@ class Blogger < ApplicationRecord
     validates :age, numericality: {greater_than: 1}
     validates :bio, length: {minimum: 30}
 
-
 end
