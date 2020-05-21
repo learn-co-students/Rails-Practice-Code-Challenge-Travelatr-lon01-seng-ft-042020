@@ -11,8 +11,5 @@
 <!-- A link to the page of that post's destination -->
   <p> 
   <label> About: </label> 
- <%= @post.destination.name %> 
+ <%= link_to @post.destination.name, destination_path(@post.destination_id)  %> 
  </p>
-
-
-<%# <%= link_to  :destination_name,destination_path(@post.destination) %> 
