@@ -1,0 +1,29 @@
+<h1>  Create a new Blogger </h1>
+
+<!-- Check if the instance of post we are attempting to create has any validation errors. -->
+<% if @blogger.errors.full_messages.length > 0 %>
+  <!-- Iterate through the full messages of each error attached to the instance of post and create a li for each one with the value of the error message injected into it. -->
+  <ul>
+    <% @blogger.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%=  form_for @blogger do |f| %>
+
+<p>
+<%= f.label :name %> <br>
+<%= f.text_field :name %> <br> </p>
+
+<p>
+<%= f.label :age %> <br>
+<%= f.text_field :age %> <br> </p>
+
+<p>
+<%= f.label :bio %> <br>
+<%= f.text_area :bio %> <p>
+
+<%= f.submit "Submit Blogger" %>
+<% end %>

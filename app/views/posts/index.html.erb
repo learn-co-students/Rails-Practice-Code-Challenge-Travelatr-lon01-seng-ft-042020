@@ -1,0 +1,18 @@
+<h1> All Posts </h1>
+
+<% @posts.each do |post| %>
+<h3> <%= link_to post.title, post_path(post) %> </h3>
+
+<p> <%= post.content%> </p>
+
+ <p> 
+ <label> Written by: </label> 
+  <%= post.blogger.name %> 
+  </p>
+
+  <p> 
+  <label> About: </label> 
+ <%= post.destination.name %> 
+ </p>
+
+ <% end %>
